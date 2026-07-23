@@ -30,8 +30,7 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 
-// const dbUrl ="mongodb+srv://gumo:0115072003@cluster0.dxvnsmx.mongodb.net/";
-const dbUrl = "mongodb://127.0.0.1:27017/NotesAdda";
+const dbUrl = process.env.ATLAS_URL || "mongodb://127.0.0.1:27017/NotesAdda";
 
 main()
   .then((res) => {

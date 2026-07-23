@@ -6,8 +6,7 @@ const initData2 = require("./data2.js");
 
 const Subject = require("../models/Subject.js");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/NotesAdda";
-// const MONGO_URL = "mongodb+srv://gumo:0115072003@cluster0.dxvnsmx.mongodb.net";
+const MONGO_URL = process.env.ATLAS_URL || "mongodb://127.0.0.1:27017/NotesAdda";
 
 main()
   .then(() => {
